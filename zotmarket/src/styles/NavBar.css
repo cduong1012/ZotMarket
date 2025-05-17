@@ -1,0 +1,99 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: #66B0C3; 
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.right-side {
+    display: flex;
+    padding-right: 70px;
+    gap: 30px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.left-side{
+    padding-left: 20px;
+}
+
+.nav-link,
+.logo-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+}
+
+.logo-link {
+    color: #FFC85C;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.nav-link {
+    font-weight: 600;
+    position: relative; 
+    display: inline-block; 
+    padding-bottom: 2px;
+}
+
+.nav-link:hover {
+    color: #FFD580;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #FFD580;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+    color: #FFD580;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background-color: #FFD580;
+}
+
+.login {
+    text-decoration: none;
+    margin-left: 50px; 
+    font-weight: 600;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+}
+
+.login:hover {
+    color: #FFD580;
+}
+
+.sign-up {
+    background-color: #FFC85C;
+    padding: 10px 15px;
+    color: #215E6C;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.sign-up:hover {
+    background-color: #e6bf66;
+}
