@@ -1,0 +1,28 @@
+.Sell {
+    color: white;
+}
+
+.text {
+    font-size: 28px;
+    font-weight: 500;
+    color: #215E6C;
+}
+
+.Title {
+    padding-top: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    padding-left: 30px;
+}
+
+.Grayb {
+    background: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    gap: 30px;
+}
