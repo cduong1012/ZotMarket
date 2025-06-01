@@ -1,3 +1,6 @@
+/* filepath: /Users/Sydney/Desktop/inf 134/zotmarket/ZotMarket/zotmarket/src/styles/NavBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
 .navbar {
     width: 100%;
     height: 50px;
@@ -7,6 +10,7 @@
     justify-content: space-between;
     padding: 20px;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .right-side {
@@ -15,6 +19,7 @@
     gap: 30px;
     font-weight: 500;
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .left-side{
@@ -26,12 +31,14 @@
     text-decoration: none;
     color: white;
     padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .logo-link {
     color: #FFC85C;
     font-weight: 900;
     font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link {
@@ -39,6 +46,7 @@
     position: relative; 
     display: inline-block; 
     padding-bottom: 2px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link:hover {

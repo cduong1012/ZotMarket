@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .listing-card {
     background-color: white;
     border-radius: 15px;
@@ -6,6 +8,7 @@
     max-width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ← added */
     transition: box-shadow 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .listing-card:hover {
@@ -15,6 +18,7 @@
 
 .listing-info {
     padding: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .listing-img {
@@ -29,12 +33,14 @@
     color: #2D7C8F;
     font-weight: bold;
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .listing-location {
     color: #727272;
     font-weight: bold;
     font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .listing-new {
@@ -43,6 +49,7 @@
     border-radius: 8px;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .listing-title {

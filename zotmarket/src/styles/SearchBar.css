@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .search {
     position: relative;
     width: 100%;
@@ -8,6 +10,7 @@
   width: 100%;
   padding: 15px;
   font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 20px;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

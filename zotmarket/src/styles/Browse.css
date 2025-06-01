@@ -1,0 +1,229 @@
+/* Browse page specific styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.browse-container {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.browse-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to bottom, #66B0C3, #B2D7E1);
+    padding: 0 45px;
+    position: relative;
+}
+
+.browse-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+    margin-left: 20px;
+}
+
+.browse-search {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    width: 723px;
+    height: 64px;
+}
+
+.browse-search .search-input {
+    width: 100%;
+    height: 64px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 32px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.browse-search .search-input:focus {
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.browse-search svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #666;
+    cursor: pointer;
+}
+
+.filter-tabs-container {
+    width: 100%;
+    background: white;
+    padding: 20px 45px;
+    border-bottom: 3px solid #66B0C3;
+    overflow-x: auto;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 25px;
+    min-width: fit-content;
+}
+
+.filter-tab {
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    background-color: #A9CCD6;
+    color: #2D7C8F;
+}
+
+.filter-tab.active {
+    background-color: #66B0C3;
+    color: white;
+}
+
+.filter-tab:hover {
+    opacity: 0.8;
+}
+
+.browse-content {
+    display: flex;
+    gap: 30px;
+    padding: 45px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filters-panel {
+    width: 300px;
+    min-width: 300px;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.filters-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #2D7C8F;
+    margin-bottom: 30px;
+}
+
+.filter-section {
+    margin-bottom: 30px;
+}
+
+.filter-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #2D7C8F;
+    margin-bottom: 15px;
+}
+
+.price-range-inputs {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price-input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.price-input::placeholder {
+    color: #999;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price-range-slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.condition-checkboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    align-items: start;
+}
+
+.condition-checkboxes > div:nth-child(1),
+.condition-checkboxes > div:nth-child(2),
+.condition-checkboxes > div:nth-child(3) {
+    grid-column: 1;
+}
+
+.condition-checkboxes > div:nth-child(4),
+.condition-checkboxes > div:nth-child(5) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.condition-checkboxes > div:nth-child(5) {
+    grid-row: 2;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.listings-section {
+    flex: 1;
+}
+
+.listings-title {
+    color: #2D7C8F;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.listings-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+/* Global font family override */
+* {
+    font-family: 'Montserrat', sans-serif;
+}
