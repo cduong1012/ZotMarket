@@ -222,8 +222,3 @@
     flex-wrap: wrap;
     padding-top: 20px;
 }
-
-/* Global font family override */
-* {
-    font-family: 'Montserrat', sans-serif;
-}

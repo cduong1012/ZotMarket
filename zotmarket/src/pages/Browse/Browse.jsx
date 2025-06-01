@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import '../../styles/Browse.css';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Card from '../../components/Card/Card';
+import ListingPopup from '../../components/ListingPopup/ListingPopup';
 
 function Browse() {
   const [searchQuery, setSearchQuery] = useState('');
   const [priceRange, setPriceRange] = useState({ min: '', max: '' });
   const [selectedConditions, setSelectedConditions] = useState([]);
   const [activeTab, setActiveTab] = useState('All Items');
+  const [selectedListing, setSelectedListing] = useState(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [savedListings, setSavedListings] = useState([]);
 
   const listings = [
     { name: 'iPad Air', price: 250, location: 'Vista del Campo', tag: 'New', category: 'Electronics' },
@@ -33,6 +37,28 @@ function Browse() {
         ? prev.filter(c => c !== condition)
         : [...prev, condition]
     );
+  };
+
+  const handleCardClick = (listing) => {
+    setSelectedListing(listing);
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+    setSelectedListing(null);
+  };
+
+  const handleSaveListing = (listing) => {
+    setSavedListings(prev => {
+      if (prev.find(item => item.name === listing.name)) {
+        // Remove from saved if already saved
+        return prev.filter(item => item.name !== listing.name);
+      } else {
+        // Add to saved
+        return [...prev, listing];
+      }
+    });
   };
 
   const filteredListings = listings.filter((item) => {
@@ -128,17 +154,25 @@ function Browse() {
           </h2>
           <div className="listings-cards">
             {filteredListings.map((item, index) => (
-              <Card 
-                key={index} 
-                name={item.name} 
-                price={item.price} 
-                location={item.location} 
-                tag={item.tag} 
-              />
+              <div key={index} onClick={() => handleCardClick(item)} style={{ cursor: 'pointer' }}>
+                <Card 
+                  name={item.name} 
+                  price={item.price} 
+                  location={item.location} 
+                  tag={item.tag} 
+                />
+              </div>
             ))}
           </div>
         </div>
       </div>
+
+      <ListingPopup 
+        listing={selectedListing}
+        isOpen={isPopupOpen}
+        onClose={handleClosePopup}
+        onSave={handleSaveListing}
+      />
     </div>
   );
 }
