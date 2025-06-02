@@ -17,8 +17,8 @@
 .popup-content {
   background: white;
   border-radius: 20px;
-  width: 90%;
-  max-width: 900px;
+  width: 95% !important;
+  max-width: 850px !important;
   max-height: 90vh;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;

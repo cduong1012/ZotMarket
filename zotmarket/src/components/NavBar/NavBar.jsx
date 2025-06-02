@@ -10,7 +10,7 @@ function NavBar() {
       </div>
       <div className='right-side'>
         <NavLink to='/' className='nav-link'>Home</NavLink>
-        <NavLink to='/browse' className='nav-link'>Browse</NavLink>
+        <NavLink to='/browse' className='nav-link'>Buy</NavLink>
         <NavLink to='/sell' className='nav-link'>Sell</NavLink>
         <NavLink to='/messages' className='nav-link'>Message</NavLink>
         <NavLink to='/login' className='login'>Login</NavLink>
