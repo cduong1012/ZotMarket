@@ -52,6 +52,25 @@ function Sell() {
                     />
                 </div>
 
+                <div className="input-form">
+                    <label className="required">Category</label>
+                    <select
+                        name="category"
+                        value={formData.category}
+                        onChange={handleInputChange}
+                        className="select-box"
+                    >
+                        <option value="">Select a category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="sports">Sports & Recreation</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="textbooks">Textbooks</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
             </div>
 
         </div>
