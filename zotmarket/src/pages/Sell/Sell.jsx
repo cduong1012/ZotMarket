@@ -71,12 +71,92 @@ function Sell() {
                     </select>
                 </div>
 
+                <div className="input-form">
+                    <label className="required">Price</label>
+                    <input
+                        name="price"
+                        value={formData.price}
+                        onChange={handleInputChange}
+                        className="text-box"
+                        type="number"
+                        placeholder="0.00"
+                        min="0"
+                        step="0.01"
+                    />
+                </div>
+
+                <div className="input-form">
+                    <label>Payment Options</label>
+                    <div className="payment-options">
+                        {['Cash', 'PayPal', 'Venmo', 'Zelle'].map(option => (
+                            <label key={option} className="checkbox-label">
+                                <input
+                                    type="checkbox"
+                                    name="paymentOptions"
+                                    value={option}
+                                    checked={formData.paymentOptions.includes(option)}
+                                    onChange={handleCheckboxMark}
+                                />
+                                {option}
+                            </label>
+                        ))}
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div className="input-form">
+                    <label className="required">Condition</label>
+                    <select
+                        name="condition"
+                        value={formData.condition}
+                        onChange={handleInputChange}
+                        className="select-box"
+                    >
+                        <option value="">Select Condition</option>
+                        <option value="new">New</option>
+                        <option value="like-new">Like New</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+
+                <div className="input-form">
+                    <label className="required">Location</label>
+                    <input
+                        name="location"
+                        value={formData.location}
+                        onChange={handleInputChange}
+                        className="text-box"
+                        type="text"
+                        placeholder="City, State"
+                    />
+                </div>
+
+                <div className="input-form">
+                    <label>Photos</label>
+                    <input
+                        type="file"
+                        multiple
+                        accept="image/*"
+                        className="file-input"
+                    />
+                    <small className="file-help-text">Upload up to 3 photos!</small>
+                </div>
+
             </div>
 
         </div>
+          <div className="submit-container">
+              <button onClick={handleSubmit} className="submit-button">
+                  Submit Listing
+              </button>
+          </div>
       </div>
 
-  )
+  );
 }
 
 export default Sell
