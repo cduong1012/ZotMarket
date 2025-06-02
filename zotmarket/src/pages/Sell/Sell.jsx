@@ -12,6 +12,14 @@ function Sell() {
         photos: []
     });
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
     const handleCheckboxMark = (e) => {
         const {name, value, checked } = e.target;
         setFormData(prev => ({
@@ -30,42 +38,20 @@ function Sell() {
       <div>
       <div className = "Title"> Create your Listing </div>
 
-        <div className = "Form-Container">
-            <div className="form-columns">
-                <div className="form-column">
-
-                    <div className="input-form">
-                        <label>Item Title</label>
-                        <input className="text-box" type="text" placeholder="input name"/>
-                    </div>
-
-                    <div className="input-form">
-                        <label>Category</label>
-                    </div>
-
-                    <div className="input-form">
-                        <label>Price</label>
-                    </div>
-
-                    <div className="input-form">
-                        <label>Payment Options</label>
-                    </div>
+        <div className = "form-container">
+            <div>
+                <div className = "input-form">
+                    <label className = "required">Item Title</label>
+                    <input
+                        name="title"
+                        value={formData.title}
+                        onChange={handleInputChange}
+                        className="text-box"
+                        type="text"
+                        placeholder="Enter item name"
+                    />
                 </div>
 
-                <div className="form-column">
-                    <div className="input-form">
-                        <label>Condition</label>
-                    </div>
-
-                    <div className="input-form">
-                        <label>Location</label>
-                    </div>
-
-                    <div className="input-form">
-                        <label>Photos</label>
-                    </div>
-
-                </div>
             </div>
 
         </div>
