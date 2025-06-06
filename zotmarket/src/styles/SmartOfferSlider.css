@@ -1,0 +1,45 @@
+.smart-offer-slider {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #c1bcbc;
+  }
+  
+  .smart-offer-slider h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .smart-offer-slider .slider {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .smart-offer-slider .offer-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .smart-offer-slider .offer-prompt {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  .smart-offer-slider .submit-offer {
+    background-color: #007aff;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .smart-offer-slider .submit-offer:hover {
+    background-color: #005fcb;
+  }
+  
