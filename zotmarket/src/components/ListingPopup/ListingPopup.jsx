@@ -1,7 +1,9 @@
+// ListingPopup.jsx (with SmartOfferSlider and MessagePanel integrated)
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/ListingPopup.css';
 import SmartOfferSlider from '../SmartOfferSlider/SmartOfferSlider';
+import MessagePanel from '../MessagePanel/MessagePanel';
 
 function ListingPopup({ listing, isOpen, onClose, onSave }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -81,9 +83,7 @@ function ListingPopup({ listing, isOpen, onClose, onSave }) {
             <SmartOfferSlider 
               basePrice={listing.price} 
               onOfferSubmit={(val) => console.log('Offer submitted:', val)} 
-            />
-
-            <div className="listing-description">
+            /><div className="listing-description">
               <h3>Description</h3>
               <p>This is a great item in {listing.tag.toLowerCase()} condition. Perfect for students looking for quality items at affordable prices. Contact seller for more details or to arrange pickup.</p>
             </div>
@@ -104,8 +104,8 @@ function ListingPopup({ listing, isOpen, onClose, onSave }) {
             </div>
 
             <div className="action-buttons">
-              <button className="contact-btn" onClick={handleContactSeller}>Contact Seller</button>
-            </div>
+  <MessagePanel listing={listing} />
+</div>
           </div>
         </div>
       </div>
