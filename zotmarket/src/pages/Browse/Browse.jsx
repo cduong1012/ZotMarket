@@ -52,10 +52,8 @@ function Browse() {
   const handleSaveListing = (listing) => {
     setSavedListings(prev => {
       if (prev.find(item => item.name === listing.name)) {
-        // Remove from saved if already saved
         return prev.filter(item => item.name !== listing.name);
       } else {
-        // Add to saved
         return [...prev, listing];
       }
     });
@@ -68,7 +66,7 @@ function Browse() {
     const matchesPrice = item.price >= minPrice && item.price <= maxPrice;
     const matchesCondition = selectedConditions.length === 0 || selectedConditions.includes(item.tag);
     const matchesCategory = activeTab === 'All Items' || item.category === activeTab;
-    
+
     return matchesSearch && matchesPrice && matchesCondition && matchesCategory;
   });
 
@@ -80,7 +78,7 @@ function Browse() {
           <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         </div>
       </div>
-      
+
       <div className="filter-tabs-container">
         <div className="filter-tabs">
           {filterTabs.map((tab) => (
@@ -94,11 +92,11 @@ function Browse() {
           ))}
         </div>
       </div>
-      
+
       <div className="browse-content">
         <div className="filters-panel">
           <h2 className="filters-title">Filters</h2>
-          
+
           <div className="filter-section">
             <h3 className="filter-section-title">Price Range</h3>
             <div className="price-range-inputs">

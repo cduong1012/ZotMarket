@@ -1,33 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/ListingPopup.css';
+import SmartOfferSlider from '../SmartOfferSlider/SmartOfferSlider';
 
 function ListingPopup({ listing, isOpen, onClose, onSave }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const navigate = useNavigate();
-  
-  // Mock images for now - in a real app these would come from the listing data
+
   const images = [
     '/api/placeholder/400/300',
     '/api/placeholder/400/301',
     '/api/placeholder/400/302'
   ];
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const goToImage = (index) => {
-    setCurrentImageIndex(index);
-  };
+  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  const goToImage = (index) => setCurrentImageIndex(index);
 
   const handleContactSeller = () => {
-    onClose(); // Close the popup first
-    navigate('/messages'); // Navigate to messages page
+    onClose();
+    navigate('/messages');
   };
 
   if (!isOpen || !listing) return null;
@@ -85,7 +77,12 @@ function ListingPopup({ listing, isOpen, onClose, onSave }) {
             <p className="listing-price">${listing.price}</p>
             <p className="listing-condition">Condition: {listing.tag}</p>
             <p className="listing-location">📍 {listing.location}</p>
-            
+
+            <SmartOfferSlider 
+              basePrice={listing.price} 
+              onOfferSubmit={(val) => console.log('Offer submitted:', val)} 
+            />
+
             <div className="listing-description">
               <h3>Description</h3>
               <p>This is a great item in {listing.tag.toLowerCase()} condition. Perfect for students looking for quality items at affordable prices. Contact seller for more details or to arrange pickup.</p>

@@ -4,7 +4,6 @@ import '../../styles/Messages.css';
 function Messages() {
   return (
     <div className="messages-page">
-
       <div className="messages-container">
         {/* Sidebar */}
         <aside className="conversation-list">
