@@ -19,7 +19,7 @@ function MessagePanel({ listing }) {
   return (
     <div className={`message-panel ${isOpen ? 'open' : ''}`}>
       <button className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
-        💬 Message Seller
+        Message Seller
       </button>
       {isOpen && (
         <div className="chat-window">
